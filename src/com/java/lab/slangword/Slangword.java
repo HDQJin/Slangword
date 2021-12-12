@@ -237,7 +237,53 @@ public class Slangword {
 
     public void gameSlangWord()
     {
+        Random random = new Random();
+        int number1, number2, number3, number4, index = 0, right, check = 0;
+        number1 = random.nextInt(map.size());
 
+        do
+        {
+            number2 = random.nextInt(map.size());
+        }while (number2 == number1);
+
+        do {
+            number3 = random.nextInt(map.size());
+        }while(number3 == number2 || number3 == number1);
+
+        do {
+            number4 = random.nextInt(map.size());
+        }while(number4 == number1 || number4 == number2 || number4 == number3);
+
+        int []number = {number1, number2, number3, number4};
+        String result[] = null;
+        right = random.nextInt(4) + 1;
+        for (String i : map.keySet()) {
+            if(index == number[1]) {
+                result[1] = map.get(i);
+            }
+            index++;
+        }
+        index = 0;
+        for (String i : map.keySet()) {
+            if(index == number[2]) {
+                result[2] = map.get(i);
+            }
+            index++;
+        }
+        index = 0;
+        for (String i : map.keySet()) {
+            if(index == number[3]) {
+                result[3] = map.get(i);
+            }
+            index++;
+        }
+        index = 0;
+        for (String i : map.keySet()) {
+            if(index == number[4]) {
+                result[4] = map.get(i);
+            }
+            index++;
+        }
     }
 }
 
