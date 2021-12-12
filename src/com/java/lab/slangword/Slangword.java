@@ -35,7 +35,9 @@ public class Slangword {
         br.close();
     }
 
-
+    /**
+     * show hash map in program
+     */
     public void show()
     {
         for (String i : map.keySet()) {
@@ -44,6 +46,9 @@ public class Slangword {
 
     }
 
+    /**
+     * menu
+     */
     public static void menu()
     {
         System.out.println("-------------------MENU-----------------");
@@ -60,6 +65,10 @@ public class Slangword {
         System.out.println("0: exit");
     }
 
+    /**
+     * function 1 search slang word in data
+     * @throws IOException
+     */
     public void searchSlang() throws IOException {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the key: ");
@@ -74,6 +83,9 @@ public class Slangword {
         bout.close();
     }
 
+    /**
+     * function 2 search destination in data
+     */
     public void searchDestination()
     {
         Scanner scanner = new Scanner(System.in);
@@ -86,7 +98,10 @@ public class Slangword {
         }
     }
 
-
+    /**
+     * function 3 history search slang word
+     * @throws IOException
+     */
     public void history() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("C:\\Users\\Admin\\Documents\\SlangWord\\src\\com\\java\\lab\\slangword\\save.txt")));
         String line;
@@ -95,6 +110,9 @@ public class Slangword {
         br.close();
     }
 
+    /**
+     * function 4 add 1 slang word in data
+     */
     public void add()
     {
         Scanner scanner = new Scanner(System.in);
@@ -123,6 +141,9 @@ public class Slangword {
             map.put(str, des);
     }
 
+    /**
+     * function 5 edit 1 slang word
+     */
     public void edit()
     {
         Scanner scanner = new Scanner(System.in);
@@ -156,6 +177,9 @@ public class Slangword {
         }
     }
 
+    /**
+     * function 6 delete 1 slang word
+     */
     public void delete()
     {
         Scanner scanner = new Scanner(System.in);
@@ -177,6 +201,10 @@ public class Slangword {
             System.out.println("Slang word not exit!");
     }
 
+    /**
+     * function 7 reset data
+     * @throws IOException
+     */
     public void reset() throws IOException {
         map.clear();
         BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("C:\\Users\\Admin\\Documents\\SlangWord\\src\\com\\java\\lab\\slangword\\slang.txt")));
@@ -191,6 +219,9 @@ public class Slangword {
         br.close();
     }
 
+    /**
+     * function 8 random 1 slang word
+     */
     public void random()
     {
         Random random = new Random();
