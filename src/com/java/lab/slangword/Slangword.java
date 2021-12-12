@@ -238,7 +238,7 @@ public class Slangword {
     public void gameSlangWord()
     {
         Random random = new Random();
-        int number1, number2, number3, number4, index = 0, right, check = 0;
+        int number1, number2, number3, number4, index = 0, right, check = 0, chosen;
         number1 = random.nextInt(map.size());
 
         do
@@ -255,10 +255,18 @@ public class Slangword {
         }while(number4 == number1 || number4 == number2 || number4 == number3);
 
         int []number = {number1, number2, number3, number4};
-        String result[] = null;
-        right = random.nextInt(4) + 1;
+        String result[] = {"", "", "", ""}, test[] = {"", "", "", ""};
+        for (String i : map.keySet()) {
+            if(index == number[0]) {
+                test[0] = i;
+                result[0] = map.get(i);
+            }
+            index++;
+        }
+        index = 0;
         for (String i : map.keySet()) {
             if(index == number[1]) {
+                test[1] = i;
                 result[1] = map.get(i);
             }
             index++;
@@ -266,6 +274,7 @@ public class Slangword {
         index = 0;
         for (String i : map.keySet()) {
             if(index == number[2]) {
+                test[2] = i;
                 result[2] = map.get(i);
             }
             index++;
@@ -273,17 +282,26 @@ public class Slangword {
         index = 0;
         for (String i : map.keySet()) {
             if(index == number[3]) {
+                test[3] = i;
                 result[3] = map.get(i);
             }
             index++;
         }
-        index = 0;
-        for (String i : map.keySet()) {
-            if(index == number[4]) {
-                result[4] = map.get(i);
-            }
-            index++;
-        }
+        Scanner scanner = new Scanner(System.in);
+        right = random.nextInt(4);
+        do {
+            System.out.println("What is the destination of " + test[right] + " ?");
+            System.out.println("1: " + result[0]);
+            System.out.println("2: " + result[1]);
+            System.out.println("3: " + result[2]);
+            System.out.println("4: " + result[3]);
+            System.out.print("Enter the chosen: ");
+            chosen = scanner.nextInt();
+        }while(chosen < 1 || chosen > 4);
+        if(chosen - 1 == right)
+            System.out.println("You right!");
+        else
+            System.out.println("You false!");
     }
 }
 

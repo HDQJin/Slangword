@@ -51,9 +51,9 @@ public class Main {
                 case 8:
                     s.random();
                     break;
-//                case 9:
-//
-//                    break;
+                case 9:
+                    s.gameSlangWord();
+                    break;
 //                case 10:
 //
 //                    break;
