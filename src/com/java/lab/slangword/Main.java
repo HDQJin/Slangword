@@ -24,7 +24,7 @@ public class Main {
             switch (chosen)
             {
                 case 0:
-                    System.out.println("You exited!");
+                    System.out.println("You exited!\nSee you again!");
                     exit = 1;
                     break;
                 case 1:
