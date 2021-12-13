@@ -54,9 +54,9 @@ public class Main {
                 case 9:
                     s.gameSlangWord();
                     break;
-//                case 10:
-//
-//                    break;
+                case 10:
+                    s.gameDestination();
+                    break;
 
             }
             if(exit == 1)

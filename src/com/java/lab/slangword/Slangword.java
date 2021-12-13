@@ -303,5 +303,61 @@ public class Slangword {
         else
             System.out.println("You false!");
     }
+
+    public void gameDestination()
+    {
+        Random random = new Random();
+        int number1, number2, number3, number4, index = 0, right, check = 0, chosen;
+        number1 = random.nextInt(map.size());
+
+        do
+        {
+            number2 = random.nextInt(map.size());
+        }while (number2 == number1);
+
+        do {
+            number3 = random.nextInt(map.size());
+        }while(number3 == number2 || number3 == number1);
+
+        do {
+            number4 = random.nextInt(map.size());
+        }while(number4 == number1 || number4 == number2 || number4 == number3);
+
+        int []number = {number1, number2, number3, number4};
+        String result[] = {"", "", "", ""}, test[] = {"", "", "", ""};
+        for (String i : map.keySet()) {
+            if(index == number[0]) {
+                test[0] = i;
+                result[0] = map.get(i);
+            }
+            index++;
+        }
+        index = 0;
+        for (String i : map.keySet()) {
+            if(index == number[1]) {
+                test[1] = i;
+                result[1] = map.get(i);
+            }
+            index++;
+        }
+        index = 0;
+        for (String i : map.keySet()) {
+            if(index == number[2]) {
+                test[2] = i;
+                result[2] = map.get(i);
+            }
+            index++;
+        }
+        index = 0;
+        for (String i : map.keySet()) {
+            if(index == number[3]) {
+                test[3] = i;
+                result[3] = map.get(i);
+            }
+            index++;
+        }
+        Scanner scanner = new Scanner(System.in);
+        right = random.nextInt(4);
+    }
 }
 
