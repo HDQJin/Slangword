@@ -235,6 +235,9 @@ public class Slangword {
         }
     }
 
+    /**
+     * function 9 game find destination from slang word
+     */
     public void gameSlangWord()
     {
         Random random = new Random();
@@ -304,6 +307,9 @@ public class Slangword {
             System.out.println("You false!");
     }
 
+    /**
+     * function 10 game find slang word from destination
+     */
     public void gameDestination()
     {
         Random random = new Random();
@@ -358,6 +364,19 @@ public class Slangword {
         }
         Scanner scanner = new Scanner(System.in);
         right = random.nextInt(4);
+        do {
+            System.out.println("What is the slang word of " + result[right] + " ?");
+            System.out.println("1: " + test[0]);
+            System.out.println("2: " + test[1]);
+            System.out.println("3: " + test[2]);
+            System.out.println("4: " + test[3]);
+            System.out.print("Enter the chosen: ");
+            chosen = scanner.nextInt();
+        }while(chosen < 1 || chosen > 4);
+        if(chosen - 1 == right)
+            System.out.println("You right!");
+        else
+            System.out.println("You false!");
     }
 }
 
