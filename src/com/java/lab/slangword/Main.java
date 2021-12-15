@@ -57,6 +57,8 @@ public class Main {
                 case 10:
                     s.gameDestination();
                     break;
+                case 11:
+
 
             }
             if(exit == 1)
