@@ -46,7 +46,7 @@ public class Slangword {
     }
 
     /**
-     * menu
+     * menu of slang word
      */
     public static void menu()
     {
