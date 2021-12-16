@@ -58,8 +58,8 @@ public class Main {
                     s.gameDestination();
                     break;
                 case 11:
-
-
+                    s.show();
+                    break;
             }
             if(exit == 1)
                 break;
